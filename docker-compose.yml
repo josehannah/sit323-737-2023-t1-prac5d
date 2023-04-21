@@ -5,8 +5,14 @@ networks:
     driver: bridge
 
 services:
-  web:
+  service1:
     image: nginx
-    container_name: nginx-container
+    container_name: nginx-container1
+    networks:
+      - my-network
+
+  service2:
+    image: nginx
+    container_name: nginx-container2
     networks:
       - my-network
